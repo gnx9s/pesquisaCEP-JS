@@ -15,7 +15,7 @@ const handleSearch = async (event) => {
   const response = await fetch(url);
   const cep = await response.json();
 
-  if (cep.length == 0) {
+  if (cep.length === 0) {
     message.innerHTML = 'Nenhum resultado encontrado';
     return;
   }
@@ -25,7 +25,7 @@ const handleSearch = async (event) => {
   const cidade = cep?.cidade;
   const bairro = cep?.bairro;
   const logradouro = cep?.logradouro || '';
-  const estado = cep?.estado;
+  const estado = cep?.estado_info.nome;
   const complemento = cep?.complemento;
 
   console.log(cidade, bairro, logradouro, estado, complemento);
