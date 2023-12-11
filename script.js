@@ -32,15 +32,18 @@ const handleSearch = async (event) => {
   cepList.insertAdjacentHTML(
     'beforeend',
     `
-    <span class="show-name">${cidade}</span>
     <br>
-    <span class="show-name">${bairro}</span>
+    <div class="border">
+    <span class="show-name">Cidade: ${cidade}</span>
     <br>
-    <span class="show-name">${complemento}</span>
+    <span class="show-name">Bairro: ${bairro}</span>
     <br>
-    <span class="show-name">${logradouro}</span>
+    <span class="show-name">Complemento do CEP: ${complemento}</span>
     <br>
-    <span class="show-name">${estado}</span>
+    <span class="show-name">Logradouro do CEP: ${logradouro}</span>
+    <br>
+    <span class="show-name">Estado: ${estado}</span>
+    </div>
     `
   );
 };
